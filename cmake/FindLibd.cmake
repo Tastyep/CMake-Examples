@@ -3,9 +3,9 @@
 # Locates the libd library and header in the given path.
 # Once done, it sets the following variables:
 #
-#   Libd_FOUND          - True if `libd` is found.
-#   Libd_INCLUDE_DIRS   - Path to where libd.h is located.
-#   Libd_LIBRARIES      - Path to the libd library.
+# Libd_FOUND          - True if `libd` is found.
+# Libd_INCLUDE_DIRS   - Path to where libd.h is located.
+# Libd_LIBRARIES      - Path to the libd library.
 
 # Path hints
 set(LIBD_PATH_HINT ${CMAKE_SOURCE_DIR}/deps/libD)
@@ -19,9 +19,9 @@ find_path(Libd_INCLUDE_DIR
 
 # Check for the library file
 find_library(Libd_LIBRARY
-  NAMES libd.so
+  NAMES D
   PATHS ${LIBD_PATH_HINT}/lib
-  NO_DEFAULT_PATH # Do not search in default locations
+  HINTS E:/Projects/CMake-Examples/deps/libD/lib
 )
 
 # Handle results
